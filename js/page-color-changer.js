@@ -11,3 +11,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
   console.log(redSlider, greenSlider, blueSlider, root);
 });
+//Step 3: Add slider existence check
+document.addEventListener('DOMContentLoaded', () => {
+  const redSlider = document.getElementById('red');
+  const greenSlider = document.getElementById('green');
+  const blueSlider = document.getElementById('blue');
+  const root = document.documentElement;
+
+  if (!redSlider || !greenSlider || !blueSlider) {
+    console.error('One or more RGB sliders not found in the DOM.');
+    return;
+  }
+});
